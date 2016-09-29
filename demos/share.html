@@ -9,6 +9,13 @@
       color: #d22;
     }
   </style>
+  <!-- Origin Trial Token, feature = Web Share, origin = https://mgiuca.github.io, expires = 2016-11-08
+       This key allows navigator.share to work without a flag in Chrome on the
+       above origin only, for a limited time. Therefore, copying this code to
+       another site won't work, unless you also get an Origin Trial Token.
+       See https://github.com/jpchase/OriginTrials
+    -->
+  <meta http-equiv="origin-trial" data-feature="Web Share" data-expires="2016-11-08" content="AiGw+1FAKYWqXaA6FlL+HTjM2IpI7iNfq9cfTBJWRT0adPvlu0JBwrlLVx1Z+R40X3DwSggZkviQN06SkcSXUw4AAABXeyJvcmlnaW4iOiAiaHR0cHM6Ly9tZ2l1Y2EuZ2l0aHViLmlvOjQ0MyIsICJmZWF0dXJlIjogIldlYlNoYXJlIiwgImV4cGlyeSI6IDE0Nzg2MjY4NTF9">
 </head>
 <body>
   <h1>Web Share Test</h1>
@@ -24,8 +31,11 @@
   Share API</a>. It will only work in browsers that have implemented the draft
   proposal. At the time of writing, this works with:</p>
   <ul>
-    <li>Google Chrome 54 for Android, with
-    chrome://flags#enable-experimental-web-platform-features enabled.</li>
+    <li>Google Chrome 55 for Android (limited trial; requires an <a
+        href="https://github.com/jpchase/OriginTrials">Origin Trial Token</a>).
+    </li>
+    <li>Google Chrome 54&ndash;55 for Android, with
+      chrome://flags#enable-experimental-web-platform-features enabled.</li>
   </ul>
   <script>
     'use strict';
